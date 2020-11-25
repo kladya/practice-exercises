@@ -28,7 +28,7 @@ const resultFunction = (sampleArray, value) => {
         index: sampleArray.findIndex(item => item === value),
         allElementIsANumber: sampleArray.every(item => typeof item === 'number'),
         someElementIsANumber: sampleArray.some(item => typeof item === 'number')
-    }
+    };
     return resultObject;
 }
 
