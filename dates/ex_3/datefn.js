@@ -21,7 +21,7 @@ const dateFunction = myDate => {
     const monthShort = (monthNamesShort[myDate.getMonth()]);
     const resultObject = {
         short: `${myDate.getFullYear()}. ${monthShort}. ${myDate.getDate()}. ${myDate.getHours()}:${myDate.getMinutes()}`,
-        long: `${myDate.getFullYear()}. ${monthLong} ${myDate.getDate()}. ${myDate.getHours()}:${myDate.getMinutes()}:${myDate.getSeconds()}`
+        long: `${myDate.getFullYear()}. ${monthLong} ${myDate.getDate()}. ${myDate.toLocaleTimeString('hu')}`
     }
     return resultObject;
 }
