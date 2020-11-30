@@ -18,6 +18,6 @@ const user = {
     lastName: 'Doe'
 };
 
-const { lastName, firstName, job = 'unknown' } = user;
+const { lastName = 'unknown', firstName = 'unknown', job = 'unknown' } = user;
 
 console.log(lastName, firstName, job);
