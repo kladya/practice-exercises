@@ -8,7 +8,7 @@ Adott az alábbi objektum:
 
 Mentsd el külön lastName, firstName, és job változókba a fenti objektum 
 property-jeit!
-Ha valamelyik nincs megadva, akkor az érték legyen a “unknown” string!
+Ha valamelyik nincs megadva, akkor az érték legyen az “unknown” string!
 */
 
 'use strict';

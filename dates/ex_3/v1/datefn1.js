@@ -12,7 +12,6 @@ tartalmazza a paraméterként kapott dátumot:
 'use strict';
 
 const myDate = new Date(2020, 0, 11, 14, 20, 10);
-console.log(myDate);
 
 const dateFunction = myDate => {
     const monthNamesLong = ['január', 'február', 'március', 'április', 'május', 'június', 'július', 'augusztus', 'szeptember', 'október', 'november', 'december'];
