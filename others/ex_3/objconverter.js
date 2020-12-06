@@ -27,7 +27,7 @@ const objectConverter = {
     setToMap(set) {return new Map([...set.entries()])},
     setToArray(set) {return [...set.entries()].flat().filter((item, index) => [...set.entries()].flat().indexOf(item) === index)},
     mapToArray(map) {return [...map.entries()]},
-    mapToSet(map) {return new Set([...map.values()])}
+    mapToSet(map) {return new Set([...map.values()])},
 };
 
 console.log(objectConverter);
