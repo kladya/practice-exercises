@@ -53,3 +53,10 @@ const createAnyELement = (name, attributes) => {
     }
     return element;
 }
+
+
+export {
+    getServerData as localStorageFunction1,
+    fillData as localStorageFunction2,
+    createAnyELement as localStorageFunction3
+};
