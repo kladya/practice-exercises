@@ -20,10 +20,34 @@ let cookieExpirationMinutes = 15;
 console.log(setCookie(cookieName, cookieValue, cookieExpirationMinutes));
 
 
+
+
+
+
 // Alternatively you can use the max-age parameter to set an expiration expressed in number of seconds:
 
 // document.cookie = 'name=Flavio; max-age=3600'        //expires in 60 minutes
 // document.cookie = 'name=Flavio; max-age=31536000'    //expires in 1 year
+
+
+
+
+
+
+
+// (function () {
+//     const saveCookie = (name, content, expireDate = new Date()) => {
+//         document.cookie = `${name}=${content}; expires=${expireDate}`;
+//     };
+
+//     const expire = new Date( new Date().getTime() + 15 * 60 * 1000 );
+//     saveCookie('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c', expire);
+// })();
+
+
+
+
+ 
 
 
 

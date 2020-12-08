@@ -17,7 +17,5 @@ import {
 import cookieObject from '../../web-storages/ex_2/cookiehandler.js';
 
 import {
-    localStorageFunction1,
-    localStorageFunction2,
-    localStorageFunction3
-} from '../../web-storages/ex_3/localstorage.js';
+    userListHandler
+} from '../../web-storages/ex_3/localstorageV2.js';

@@ -52,4 +52,13 @@ console.log(cookieHandler.deleteCookies());
 
 
 
+// cookie törlésére másik módszer:
+
+// document.cookie = `${item[0]}=; max-age=0`;
+
+
+
+
+
+
 export default cookieHandler;
