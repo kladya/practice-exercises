@@ -11,7 +11,8 @@ const setCookie = (name, value, expirationMinutes) => {
     const myDate = new Date();
     myDate.setMinutes(myDate.getMinutes() + expirationMinutes);
     const expires = myDate.toString();
-    document.cookie = `${name}=${value}; expires=${expires}; HttpOnly`;
+    document.cookie = `${name}=${value}; expires=${expires}`;
+    // document.cookie = `${name}=${value}; expires=${expires}; HttpOnly`;
 }
 
 let cookieName = 'token';

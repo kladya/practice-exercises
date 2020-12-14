@@ -9,6 +9,7 @@ const userHandler = {
             }
         });     
     },
+
     showList(parent) {
         parent = document.querySelector(parent);
         this.getList().then(
@@ -19,6 +20,7 @@ const userHandler = {
             err => console.error(err)
         );
     },
+
     generateList(parent, list) {
         list.forEach(element => {
             const p = document.createElement('p');
@@ -30,9 +32,3 @@ const userHandler = {
 };
 
 userHandler.showList('.user-list');
-
-
-
-export {
-    userHandler as userListHandler
-};

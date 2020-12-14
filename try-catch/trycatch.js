@@ -1,13 +1,12 @@
-/* 
-Adott egy json file, ami valójában egy tömb, lastName, firstName 
-propertyket tartalmazó objektumokkal.
-Írj egy függvényt, ami indít egy ajax kérést, ami elkéri a json 
-tartalmát, és a firstName, lastName párosokat egymás alá beleírja 
-egy div-en belüli p-tagekbe, és létrehoz egy users nevű bejegyzést 
-a localStorage-ben, ahol a json tartalmát letárolja.
-Módosítsd a függvényt úgy, hogy amennyiben a localStorage-ban van 
-users bejegyzés, úgy onnan olvassa ki az adatokat, ha nincs csak 
-akkor küldjön ajax kérést.
+/*
+Módosítsd a Storage nevű modul 3. feladatát úgy, hogy amennyiben a kérés során 
+bármilyen hiba van, szintén a localStorage-ból olvassa ki az adatokat a program!
+Ilyenkor jeleníts meg egy üzenetet, hogy az alkalmazás offline!
+Amennyiben a localStorage is üres, jelents meg egy szabadon választott 
+hibaüzenetet, és alapértelmezetten 5 másodpercenként ismételd meg újra a kérést 
+összes 10 alaklommal! Ez a két érték paraméterként megadható legyen! Ha a 10-ből 
+bármelyik alakalommal sikeres a kérés, akkor aszerint járj el (kiíratás, 
+tárolás, stb.).
 */
 
 'use strict';
@@ -37,13 +36,15 @@ const userHandler = () => {
             data
         ));
     }
-
+    
     const showData = () => {
         getServerData('http://localhost:3000/users').then(
             data => fillData(data)
-        );
+        ).catch(err => {
+            console.error(err);
+        });
     }
-    
+
     const showDataFromLS = () => {
         let html = localStorage.getItem('users');
         if (html) {
@@ -54,10 +55,3 @@ const userHandler = () => {
 }
 
 userHandler();
-
-
-
-
-export {
-    userHandler as showUserDB
-};

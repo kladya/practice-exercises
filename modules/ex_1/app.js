@@ -14,8 +14,26 @@ import {
     cookieExpirationMinutes
 } from '../../web-storages/ex_1/token.js';
 
-import cookieObject from '../../web-storages/ex_2/cookiehandler.js';
+import cookieHandler from '../../web-storages/ex_2/cookiehandler.js';
 
 import {
-    userListHandler
-} from '../../web-storages/ex_3/localstorageV2.js';
+    showUserDB
+} from '../../web-storages/ex_3/localstorage.js';
+
+
+console.log(setCookie(cookieName, cookieValue, cookieExpirationMinutes));
+
+
+const cookieObject = {
+    'viewed': '5',
+    'uid': '354774631237',
+    'ssid': 'Bx55OWbHJ0Vt_IGIFÍ',
+};
+
+console.log(cookieHandler.setCookies(cookieObject));
+console.log(cookieHandler.getCookies(cookieObject));
+console.log(cookieHandler.saveIntoSessionStorage(cookieObject));
+console.log(cookieHandler.deleteCookies());
+
+
+console.log(showUserDB());
